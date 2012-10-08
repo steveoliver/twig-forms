@@ -14,8 +14,7 @@ function twig_forms_menu() {
 }
 
 function twig_forms_page() {
-  $form = drupal_get_form('twig_forms_form_1');
-  return render($form);
+  return drupal_get_form('twig_forms_form_1');
 }
 
 function twig_forms_form_1($form, &$form_state) {

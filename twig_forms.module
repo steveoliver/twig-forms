@@ -31,12 +31,12 @@ function twig_forms_form_1($form, &$form_state) {
     '#options' => array(1 => t('One'), 2 => t('Two'), 3 => t('Three'))
   );
   $form['textfield'] = array(
-  	'#type' => 'textfield',
-  	'#title' => t('Text field'),
+    '#type' => 'textfield',
+    '#title' => t('Text field'),
   );
   $form['markup'] = array(
-		'#markup' => 'markup'
-	);
+    '#markup' => 'markup'
+  );
 
   return $form;
 }

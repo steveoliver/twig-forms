@@ -1,0 +1,4 @@
+name = Twig Forms
+description = Sample implementations of the Forms API for use in testing the Twig templating engine.
+version = 8.x-1.x
+core = 8.x

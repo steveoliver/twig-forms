@@ -1,0 +1,42 @@
+<?php
+/**
+ * @file Twig Forms module.
+ */
+
+function twig_forms_menu() {
+  $items = array();
+  $items['twig-forms'] = array(
+    'type' => MENU_CALLBACK,
+    'page callback' => 'twig_forms_page',
+    'access callback' => TRUE
+  );
+  return $items;
+}
+
+function twig_forms_page() {
+  $form = drupal_get_form('twig_forms_form_1');
+  return render($form);
+}
+
+function twig_forms_form_1($form, &$form_state) {
+  $form = array();
+  $form['checkboxes'] = array(
+    '#type' => 'checkboxes',
+    '#title' => t('Checkboxes'),
+    '#options' => array(1 => t('One'), 2 => t('Two'))
+  );
+  $form['select'] = array(
+    '#type' => 'select',
+    '#title' => t('Select'),
+    '#options' => array(1 => t('One'), 2 => t('Two'), 3 => t('Three'))
+  );
+  $form['textfield'] = array(
+  	'#type' => 'textfield',
+  	'#title' => t('Text field'),
+  );
+  $form['markup'] = array(
+		'#markup' => 'markup'
+	);
+
+  return $form;
+}
